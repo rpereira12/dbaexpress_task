@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBA Express</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- Menu superior (Navegação) -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-nav">
+        <a class="navbar-brand" href="#"><img src="assets/img/dba_express_logo.png" class="img-fluid dba-logo" alt="DbaExpress Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="box-buttons" id="navbarSupportedContent">
+                <button type="button" class="btn btn-navbar" data-toggle="modal" data-target="#modalNotifify">Operações</button>
+                <button type="button" class="btn btn-navbar" data-toggle="modal" data-target="#modalNotifify">Gestão</button>
+                <button type="button" class="btn btn-navbar" data-toggle="modal" data-target="#modalNotifify">Financeiro</button>
+                <button type="button" class="btn btn-navbar" data-toggle="modal" data-target="#modalNotifify">Ferramentas</button>
+                <button type="button" class="btn btn-navbar" data-toggle="modal" data-target="#modalNotifify">Cadastros</button>
+            </div>
+
+            <div class="box-search" id="navbarSupportedContent">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-search">Codigo</button>
+                    <button type="button" class="btn btn-search dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                </div>
+                <input class="form-control" type="search" placeholder="Pesquise..." id="search-bar" aria-label="Search">
+                <button type="button" class="btn btn-search" id="search-label" data-toggle="modal" data-target="#modalNotifify">OK</button>
+            </div>
+
+            <div class="user-settings ml-md-auto" id="navbarSupportedContent">
+
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalNotifify"><img src="assets/img/notifications-bell-button.png" alt="notificações"><span class="notification-alert">1</span></button>
+                <button type="button" class="btn btn-light"><img src="assets/img/user.png" alt="Usuário" data-toggle="modal" data-target="#modalNotifify"></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container box-tools-menu">
+
+        <h2 class="lead">
+            <label><img src="assets/img/settings.png" alt="funções"></label> Funçoes mais utilizadas.
+        </h2>
+
+        <div class="box-tools-buttons">
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Operações</button>
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Confirmar recebimento do pedido</button>
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Serviços</button>
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Empresas</button>
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Preços</button>
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Mudar empresa</button>
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Bases</button>
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Faturamento</button>
+            <button type="button" class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Colocar em Rota</button>
+        </div>
+
+    </section>
+
+    <main class="container box-indicators">
+
+        <h2 class="lead">
+            <label><img src="assets/img/bars-chart.png" alt="grafico"></label> Meus indicadores.
+        </h2>
+
+        <div class="card">
+
+            <div class="card-header">
+                <p><strong>Raio X da minha base</strong> - Ultimos 31 dias.</p>
+            </div>
+
+            <div class="card-body">
+
+                <div class="row indicators-content">
+
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-8">Performance dos ultimos 31 dias</div>
+                                    <div class="col-sm-4"><label><img src="assets/img/graph.png" alt="grafico"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="lead">90,24%</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Abrir Performance</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <p><strong>!</strong> Sobre os pedidos confirmados.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-8">Manifestos pendentes de recebimento</div>
+                                    <div class="col-sm-4"><label><img src="assets/img/trucking.png" alt="grafico"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="lead">0</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Abrir controle de expedição</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <p><strong>!</strong> Últimos 31 dias pela data da expedição</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-8">Produtos pendentes de recebimento</div>
+                                    <div class="col-sm-4"><label><img src="assets/img/warning.png" alt="grafico"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="lead">1</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Abrir pendência de recebimentos</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <p><strong>!</strong> Últimos 31 dias pela data da expedição</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <br/>
+                
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-8">Pedidos pendentes de finalização e fora do prazo</div>
+                                    <div class="col-sm-4"><label><img src="assets/img/icon.png" alt="grafico"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="lead">1995</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Abrir pendências</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <p><strong>!</strong> Últimos 31 dias pela data da confirmação</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-8">Pedidos tratados aguardando ação</div>
+                                    <div class="col-sm-4"><label><img src="assets/img/checked.png" alt="grafico"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="lead">38</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Abrir pedidos tratados</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <p><strong>!</strong> Pedidos para nova tentativa ou devolução</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-8">Chamados pendentes de atendimento</div>
+                                    <div class="col-sm-4"><label><img src="assets/img/plus.png" alt="grafico"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="lead">1</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Abrir chamados</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <p><strong>!</strong> Últimos 31 dias pela data do cadastro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <br/>
+                
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-8">Remuneração da minha base</div>
+                                    <div class="col-sm-4"><label><img src="assets/img/icon.png" alt="grafico"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="lead">R$ 3,00</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Abrir Remuneração</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <p><strong>!</strong> Últimos 31 dias pela data da confirmação</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-8">Remuneração dos meus motoristas</div>
+                                    <div class="col-sm-4"><label><img src="assets/img/minus.png" alt="grafico"></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="lead">R$ 132.060,19</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-tools" data-toggle="modal" data-target="#modalNotifify">Abrir remuneração dos motoristas</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <p><strong>!</strong> Últimos 31 dias pela data da confirmação</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modais -->
+
+    <div class="modal fade" id="modalNotifify" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ops!!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    Função ainda não implementada. Esta versão só possui a apresentação do layout!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</html>

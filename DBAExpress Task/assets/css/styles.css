@@ -1,0 +1,110 @@
+
+/* Menu de navegação */
+
+.box-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-navbar {
+    background-color: #34495e;
+    color: #fafafa;
+}
+
+.btn-search {
+    background-color: #fafafa;
+    border: 1px solid rgb(206, 212, 218);
+}
+
+.dba-logo {
+    max-height: 45px;
+}
+
+.box-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.box-buttons button:nth-child(1n) {
+    margin-bottom: 2px;
+}
+
+.border-nav {
+    border-bottom: 2px solid rgba(206, 212, 218, 0.6);
+}
+
+.user-settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-alert {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* menu de funções */
+
+.box-tools-menu {
+    margin-top: 2%;
+}
+
+.btn-tools {
+    background-color: #fff;
+    border: 2px solid rgba(206, 212, 218, 0.6);
+}
+
+.box-tools-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* menu indicadores */
+
+.box-indicators {
+    margin-top: 2%;
+}
+
+.indicators-content{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media queries */
+
+/*menu de navegação*/
+
+@media screen and (min-width: 768px){
+    .indicators-content{
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .box-buttons {
+        flex-direction: row;
+    }
+
+    .box-buttons button:nth-child(1n) {
+        margin-bottom: 0;
+        margin-right: 3px;
+    }
+
+    .box-search {
+        margin-left: 1%;
+    }
+
+    .user-settings {
+        flex-direction: row;
+    }
+
+    .box-tools-buttons {
+        flex-direction: row;
+    }
+
+}
